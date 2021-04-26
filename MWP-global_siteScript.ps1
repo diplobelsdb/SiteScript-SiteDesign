@@ -95,7 +95,7 @@ $global_site_script = @'
                 "Editor",
                 "_UIVersionString"
                 ],
-                "query": "<OrderBy><FieldRef Name=\"Modified\" Ascending=\"FALSE\" /></OrderBy>",
+                "query": "<OrderBy><FieldRef Name=\"FileLeafRef\" /></OrderBy>",
                 "rowLimit": 30,
                 "isPaged": true,
                 "makeDefault": true,
@@ -123,7 +123,7 @@ $global_site_script = @'
               
     ],
     "bindata": { },
-    "version": 1
+    "version": 2
 }
 '@
 
@@ -135,7 +135,7 @@ $guid.Id.ToString()
 
 # update a previously uploaded Site Script
 $sitescriptID = Get-SPOSiteScript | where {$_.Title -EQ "Global MWP"} | Select -First 1 Id
-Set-SPOSiteScript -Identity $sitescriptID.Id  -Content $global_site_script -Version 1
+Set-SPOSiteScript -Identity $sitescriptID.Id  -Content $global_site_script -Version 2
 
 
 # ---------
