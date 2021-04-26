@@ -29,7 +29,7 @@ $EXTRANET_site_script = @'
 '@
 
 # add SiteScript
-Add-SPOSiteScript  -Title "EXTRANET MWP"  -Content $EXTRANET_site_script  -Description "Removing navigation link 'Conversations'"
+Add-SPOSiteScript  -Title "EXTRANET MWP"  -Content $EXTRANET_site_script  -Description "Removing navigation link 'Conversations' and 'Notebook'"
 $guid = Get-SPOSiteScript | where {$_.Title -EQ "EXTRANET MWP"} | Select -First 1 Id
 $guid.Id.ToString()  
 
