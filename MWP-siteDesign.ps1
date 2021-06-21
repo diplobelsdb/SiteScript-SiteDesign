@@ -11,6 +11,7 @@ $guid_global = (Get-SPOSiteScript | where {$_.Title -EQ "Global MWP"} | Select -
 $guid_external = (Get-SPOSiteScript | where {$_.Title -EQ "External MWP"} | Select -First 1 Id).Id.Guid
 $guid_internal = (Get-SPOSiteScript | where {$_.Title -EQ "Internal MWP"} | Select -First 1 Id).Id.Guid
 $guid_posten = (Get-SPOSiteScript | where {$_.Title -EQ "Posten MWP"} | Select -First 1 Id).Id.Guid
+$guid_posten_FR = (Get-SPOSiteScript | where {$_.Title -EQ "Posten FR MWP"} | Select -First 1 Id).Id.Guid
 $guid_EXTRANET = (Get-SPOSiteScript | where {$_.Title -EQ "EXTRANET MWP"} | Select -First 1 Id).Id.Guid
 
 # export content sitescript to notepad
@@ -35,6 +36,10 @@ Add-SPOSiteDesign -Title "MWP – external Team site" -WebTemplate "64" -SiteScr
 # Posten
 Add-SPOSiteDesign -Title "MWP – internal Posten site" -WebTemplate "64" -SiteScripts @($guid_internal, $guid_posten, $guid_global)  -Description "Disabling external sharing, adding theme, adding custom columns for archiving, setting regional settings, customizing navigation" 
 Add-SPOSiteDesign -Title "MWP – external Posten site" -WebTemplate "64" -SiteScripts @($guid_external, $guid_posten, $guid_global)  -Description "Enabling external sharing, adding theme, adding custom columns for archiving, setting regional settings, customizing navigation" 
+
+# Posten FR
+Add-SPOSiteDesign -Title "MWP – internal Posten FR site" -WebTemplate "64" -SiteScripts @($guid_internal, $guid_global, $guid_posten_FR)  -Description "Disabling external sharing, adding theme, adding custom columns for archiving, setting regional settings, customizing navigation" 
+Add-SPOSiteDesign -Title "MWP – external Posten FR site" -WebTemplate "64" -SiteScripts @($guid_external, $guid_global, $guid_posten_FR)  -Description "Enabling external sharing, adding theme, adding custom columns for archiving, setting regional settings, customizing navigation" 
 
 
 # Communication site - 68
