@@ -20,7 +20,7 @@ $posten_fr_site_script = @'
         "subactions": [
             {
                 "verb": "setTitle",
-                "title": "01.Communication - Public Diplomacy"
+                "title": "01.Communication - Diplomatie publique"
             }
             ,{
                 "verb": "addSPView",
