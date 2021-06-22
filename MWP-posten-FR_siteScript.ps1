@@ -742,7 +742,7 @@ $posten_fr_site_script = @'
       }   ,{
         "verb": "createSPList",
         "listName": "Archive_ShareDoc",
-        "templateType": 106,
+        "templateType": 101,
         "addNavLink":true,
         "subactions": [
             {
