@@ -85,7 +85,7 @@ $posten_fr_site_script = @'
         "subactions": [
             {
                 "verb": "setTitle",
-                "title": "02.Bâtiments, IT et  Logistique"
+                "title": "02.Bâtiments, IT et Logistique"
             }
             ,{
                 "verb": "addSPView",
