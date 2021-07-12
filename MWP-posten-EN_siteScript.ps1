@@ -207,13 +207,13 @@ $posten_en_site_script = @'
         ]
       },{
         "verb": "createSPList",
-        "listName": "04. Human Resources",
+        "listName": "04Human_Resources",
         "templateType": 101,
         "addNavLink":true,
         "subactions": [
             {
                 "verb": "setTitle",
-                "title": "04.Resources humaines"
+                "title": "04. Human Resources"
             }
             ,{
                 "verb": "addSPView",
